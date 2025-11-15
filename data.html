@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Absensi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold text-center text-gray-900 mb-6">
+            Laporan Data Absensi
+        </h1>
+        
+        <div class="flex flex-col sm:flex-row gap-3 mb-6">
+            <button id="exportButton"
+                    class="w-full sm:w-auto flex-1 bg-teal-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-teal-600 transition-colors">
+                Ekspor ke Excel (CSV)
+            </button>
+            <button id="deleteButton"
+                    class="w-full sm:w-auto flex-1 bg-red-500 text-white py-2 px-4 rounded-md font-semibold hover:bg-red-600 transition-colors">
+                Hapus Semua Data
+            </button>
+        </div>
+
+        <div class="overflow-x-auto border border-gray-200 rounded-lg">
+            <table id="dataTable" class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Waktu Absen</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kelas/Divisi</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody" class="bg-white divide-y divide-gray-200">
+                    </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="block text-center mt-6 text-blue-600 hover:underline">
+            Kembali ke Halaman Absensi
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
